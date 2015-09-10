@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
 	before_save :encrypt_password
   before_update :encrypt_password
 
+  has_many :tweets
+
  	validates :email, :presence => true,
                     :format => {:with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i},
                     :uniqueness => true
