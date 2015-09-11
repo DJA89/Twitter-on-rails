@@ -6,8 +6,4 @@ FactoryGirl.define do
     email {FFaker::Internet.email}
     password {FFaker::Internet.password(6, 99)}
   end
-
-
-
-
 end

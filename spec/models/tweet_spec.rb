@@ -2,22 +2,23 @@ require 'rails_helper'
 
 RSpec.describe Tweet, type: :model do
 
-   
+  describe 'validations' do
+    
     it { should belong_to(:user) }
 
- 
- 
-  it 'should have text' do
+    it 'should have text' do
 
-    tweet = build(:tweet, text: nil)
+      tweet = build(:tweet, text: nil)
 
-    expect(build(:user, tweets: [tweet])).to_not be_valid
+      expect(build(:user, tweets: [tweet])).to_not be_valid
 
-  end
+    end
 
-  it 'should have user' do
+    it 'should have user' do
 
-    expect(build(:tweet)).to_not be_valid
+      expect(build(:tweet)).to_not be_valid
+
+    end
 
   end
 
