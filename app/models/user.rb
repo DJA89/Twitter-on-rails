@@ -5,6 +5,9 @@ class User < ActiveRecord::Base
 
   has_many :tweets
 
+  has_many :user_like_tweets
+  has_many :liked_tweets, through: :user_like_tweets, source: :tweet
+
  	validates :email, :presence => true,
                     :format => {:with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i},
                     :uniqueness => true

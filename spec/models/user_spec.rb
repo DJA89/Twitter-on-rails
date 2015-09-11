@@ -38,6 +38,8 @@ RSpec.describe User, type: :model do
     it 'should be valid' do
       expect(FactoryGirl.create(:user)).to be_valid
     end
+
+    it {should have_many(:user_like_tweets)}
   end
 
 end
