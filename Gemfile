@@ -45,7 +45,10 @@ group :development, :test do
 	gem 'factory_girl_rails' , '~> 4.0'
 
 	gem 'ffaker', '~> 2.1.0'
+
+	gem 'shoulda-matchers', '~> 2.8.0'
   
+  gem 'shoulda', '~> 3.5.0'
 end
 
 
