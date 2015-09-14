@@ -47,8 +47,10 @@ group :development, :test do
 	gem 'ffaker', '~> 2.1.0'
 
 	gem 'shoulda-matchers', '~> 2.8.0'
-  
+
   gem 'shoulda', '~> 3.5.0'
+
+  gem 'capybara', '~> 2.5.0'
 end
 
 
