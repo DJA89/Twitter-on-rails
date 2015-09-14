@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :tweet do
-    user_id ""
-    text {FFaker::Lorem.characters(130)}
+    user { FactoryGirl.create(:user)}
+    text { FFaker::Lorem.characters(130) }
   end
 
 end
