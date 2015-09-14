@@ -10,11 +10,9 @@ class Tweet < ActiveRecord::Base
 
   def liked_by(user)
     self.like_users << user
-    self.save
   end
 
   def unliked_by(user)
     self.like_users.delete(user)
-    self.save
   end
 end
