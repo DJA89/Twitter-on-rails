@@ -1,6 +1,10 @@
+require 'bcrypt'
+
 class User < ActiveRecord::Base
 	require "digest"
-	before_save :encrypt_password
+  include BCrypt
+
+	before_save :encrypt_password, :lowercase_email
   before_update :encrypt_password
 
   has_many :tweets
@@ -15,12 +19,17 @@ class User < ActiveRecord::Base
  	validates_presence_of :first_name
   validates_presence_of :last_name
   validates_length_of :password, minimum: 6
-
+  has_secure_password
 
 
 	attr_accessor :password
 
 	def encrypt_password
-    self.encrypted_password = Digest::MD5.hexdigest password
+    pass = password + "banana"
+    self.encrypted_password = Digest::MD5.hexdigest pass
 	end
+
+  def lowercase_email
+    self.email = email.downcase
+  end
 end
