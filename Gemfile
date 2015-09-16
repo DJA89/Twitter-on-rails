@@ -47,8 +47,13 @@ group :development, :test do
 	gem 'ffaker', '~> 2.1.0'
 
 	gem 'shoulda-matchers', '~> 2.8.0'
-  
+
   gem 'shoulda', '~> 3.5.0'
+
+  gem 'capybara', '~> 2.5.0'
+
+  gem 'bootstrap-sass', '~> 3.3.5.1'
+
 end
 
 
