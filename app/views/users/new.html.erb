@@ -1,3 +1,49 @@
 <% provide(:title, 'Signup')%>
-<h1>Sign up</h1>
-<p>This will be a sign up page for new users.</p>
+<div class="form">
+  <h2>Sign up</h2>
+
+  <%= render 'layouts/errors_messages' %>
+  <%= form_for(@u) do |u| %>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 rowsep">
+        <%= u.label :first_name %><br>
+        <%= u.text_field :first_name, class: 'suform form-control' %><br>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 rowsep">
+    <%= u.label :last_name %> <br>
+    <%= u.text_field :last_name, class: 'suform form-control'  %><br>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 rowsep">
+    <%= u.label :email %><br>
+    <%= u.email_field :email, class: 'suform form-control'  %><br>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 rowsep">
+    <%= u.label :password %><br>
+    <%= u.password_field :password, class: 'suform form-control'  %> <br>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 rowsep">
+    <%= u.label :password_confirmation, "Confirm your password" %><br>
+    <%= u.password_field :password_confirmation, class: 'suform'  %><br>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 rowsep">
+    <%= u.submit "Create my Accout", class: "white btn btn-lg btn-primary nounderline suform" %>
+      </div>
+    </div>
+
+  <% end %>
+</div>

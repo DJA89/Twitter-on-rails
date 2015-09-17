@@ -1,0 +1,14 @@
+<% if @u.errors.any? %>
+  <div class="alert alert-danger col-md-8 col-md-offset-2 ">
+
+      The form contains <%= pluralize(@u.errors.count, "error") %>.
+
+  </div>
+<% end %>
+<div class="col-md-8 col-md-offset-2 errlist">
+  <ul>
+  <% @u.errors.full_messages.each do |e|%>
+    <li><%= e %></li>
+  <% end %>
+  </ul>
+</div>
