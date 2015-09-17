@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
 
   before_save :encrypt_password, :lowercase_email
-  before_update :encrypt_password, :lowercase_email
 
   has_many :tweets
 
@@ -12,8 +11,8 @@ class User < ActiveRecord::Base
                     :format => {:with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i},
                     :uniqueness => { case_sensitive: false}
 
-  validates_presence_of :first_name
-  validates_presence_of :last_name
+  validates :first_name, :presence => true
+  validates :last_name, :presence => true
   validates :password, length: { minimum: 6 },
                        presence: true
   has_secure_password
