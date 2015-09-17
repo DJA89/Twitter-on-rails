@@ -239,6 +239,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin (~> 1.0.0.pre1)
+  bcrypt (~> 3.1.10)
   bootstrap-sass (~> 3.3.5.1)
   byebug
   capybara (~> 2.5.0)

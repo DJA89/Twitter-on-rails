@@ -40,6 +40,7 @@ RSpec.describe User, type: :model do
     end
 
     it {should have_many(:user_like_tweets)}
+
   end
 
 end

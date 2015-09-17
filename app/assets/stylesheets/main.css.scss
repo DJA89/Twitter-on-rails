@@ -3,34 +3,13 @@
 
 a.nounderline {
   text-decoration: none;
-  
 }
-
-
-/* universal */
-
-  /*body {
-    padding-top: 60px;
-  }
-  section {
-    overflow: auto;
-  }
-
-  textarea {
-    resize: vertical;
-  }
-
-  .center {
-    text-align: center;
-  }
-
-  .center h1 {
-    margin-bottom: 10px;
-  }
-*/
 
 /* typography */
 
+  a.white:visited {
+    color: #fff
+  }
   h1, h2, h3, h4, h5, h6 {
     line-height: 1;
   }
@@ -73,34 +52,38 @@ a.nounderline {
     }
   }
 
-/* footer */
 
-/*  footer {
-    margin-top: 45px;
-    padding-top: 5px;
-    border-top: 1px solid #eaeaea;
-    color: $gray-light;
+  /*debug*/
+
+  pre.debug_dump{
+    padding-bottom:20px;
+    margin-bottom:30px;
+    color:inherit;
+    background-color:#eee;
   }
 
-  footer a {
-    color: #555;
-    &:hover {
-      color: #222;
-    }
+  .suform{
+    width: 100%
   }
 
-
-  footer small {
-    float: left;
+  .rowsep{
+    margin-bottom: 30px;
   }
 
-  footer ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 15px;
-    }
+  pre.debug_dump{
+    padding-bottom:20px;
+    margin-bottom:30px;
+    color:inherit;
+    background-color:#eee;
   }
 
-  */
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+.errlist{
+  color: red;
+}

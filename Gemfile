@@ -54,6 +54,8 @@ group :development, :test do
 
   gem 'bootstrap-sass', '~> 3.3.5.1'
 
+  gem 'bcrypt',  '~> 3.1.10'
+
 end
 
 
