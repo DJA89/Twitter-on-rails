@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get 'signup' => 'users#new'
 
+  post 'signup' => 'users#create'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 

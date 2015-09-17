@@ -3,7 +3,7 @@
   <h2>Sign up</h2>
 
   <%= render 'layouts/errors_messages' %>
-  <%= form_for(@u) do |u| %>
+  <%= form_for(@u, url: signup_path) do |u| %>
     <div class="row">
       <div class="col-md-8 col-md-offset-2 rowsep">
         <%= u.label :first_name %><br>
