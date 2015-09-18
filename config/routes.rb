@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   root 'static_pages#home'
 
   get 'help' => 'static_pages#help'
@@ -10,6 +12,12 @@ Rails.application.routes.draw do
   get 'signup' => 'users#new'
 
   post 'signup' => 'users#create'
+
+  get 'login' => 'sessions#new'
+
+  post 'login' => 'sessions#create'
+
+  delete 'logout' => 'sessions#destroy'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

@@ -1,0 +1,32 @@
+<% provide(:title, 'Log in')%>
+<div class="form">
+  <h2>Log in</h2>
+
+  <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type%>"><%=message%></div>
+  <% end %>
+
+  <%= form_for(:session, url: login_path) do |u| %>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 rowsep">
+    <%= u.label :email %><br>
+    <%= u.email_field :email, class: 'suform form-control'  %><br>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 rowsep">
+    <%= u.label :password %><br>
+    <%= u.password_field :password, class: 'suform form-control'  %> <br>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 rowsep">
+    <%= u.submit "Log in", class: "white btn btn-lg btn-primary nounderline suform" %>
+      </div>
+    </div>
+
+  <% end %>
+</div>
